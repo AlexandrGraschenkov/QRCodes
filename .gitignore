@@ -1,0 +1,11 @@
+
+#############################################
+
+
+# OS X
+.DS_Store
+
+# XCode
+UserInterfaceState.xcuserstate
+Breakpoints_v2.xcbkptlist
+Pods
