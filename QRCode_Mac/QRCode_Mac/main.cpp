@@ -12,6 +12,7 @@
 #include <opencv2/imgproc.hpp>
 
 #include "dot_detector.hpp"
+#include "qr_image_extractor.hpp"
 
 using namespace std;
 using namespace cv;
@@ -24,17 +25,19 @@ int main(int argc, const char * argv[]) {
     Mat grayImg;
     cvtColor(img, grayImg, CV_BGR2GRAY);
     threshold(grayImg, grayImg, 110, 255, CV_THRESH_BINARY);
-    vector<Dot> foundedPoints = findDots(grayImg);
+    vector<Dot> foundedDots = findDots(grayImg);
     
     Mat debugImg;
     cvtColor(grayImg, debugImg, CV_GRAY2BGR);
-    for (Dot p : foundedPoints) {
+    for (Dot p : foundedDots) {
         circle(debugImg, p.pos, 3, CV_RGB(0, 255, 0), CV_FILLED);
         rectangle(debugImg, p.area, CV_RGB(0, 255, 0), 2);
     }
+    Mat extracted = extractQR(grayImg, foundedDots);
     
     imshow("Source", img);
     imshow("Founded points", debugImg);
+    imshow("QR Warped", extracted);
     waitKey();
     
     return 0;

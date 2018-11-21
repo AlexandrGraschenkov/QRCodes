@@ -10,6 +10,7 @@
 		FA0C13B521A4A484008A08A2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0C13B421A4A484008A08A2 /* main.cpp */; };
 		FA0C13BC21A4A601008A08A2 /* qr_image.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA0C13BB21A4A5E9008A08A2 /* qr_image.jpg */; };
 		FA0C13BF21A4B0F4008A08A2 /* dot_detector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0C13BD21A4B0F4008A08A2 /* dot_detector.cpp */; };
+		FA0C13C221A5FA5A008A08A2 /* qr_image_extractor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0C13C021A5FA5A008A08A2 /* qr_image_extractor.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		FA0C13BB21A4A5E9008A08A2 /* qr_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = qr_image.jpg; sourceTree = "<group>"; };
 		FA0C13BD21A4B0F4008A08A2 /* dot_detector.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = dot_detector.cpp; sourceTree = "<group>"; };
 		FA0C13BE21A4B0F4008A08A2 /* dot_detector.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = dot_detector.hpp; sourceTree = "<group>"; };
+		FA0C13C021A5FA5A008A08A2 /* qr_image_extractor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = qr_image_extractor.cpp; sourceTree = "<group>"; };
+		FA0C13C121A5FA5A008A08A2 /* qr_image_extractor.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = qr_image_extractor.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 		FA0C13B321A4A484008A08A2 /* QRCode_Mac */ = {
 			isa = PBXGroup;
 			children = (
+				FA0C13C021A5FA5A008A08A2 /* qr_image_extractor.cpp */,
+				FA0C13C121A5FA5A008A08A2 /* qr_image_extractor.hpp */,
 				FA0C13BD21A4B0F4008A08A2 /* dot_detector.cpp */,
 				FA0C13BE21A4B0F4008A08A2 /* dot_detector.hpp */,
 				FA0C13B421A4A484008A08A2 /* main.cpp */,
@@ -127,6 +132,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA0C13C221A5FA5A008A08A2 /* qr_image_extractor.cpp in Sources */,
 				FA0C13B521A4A484008A08A2 /* main.cpp in Sources */,
 				FA0C13BF21A4B0F4008A08A2 /* dot_detector.cpp in Sources */,
 			);
@@ -259,6 +265,7 @@
 					"-lopencv_imgproc",
 					"-lopencv_videoio",
 					"-lopencv_imgcodecs",
+					"-lopencv_calib3d",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -277,6 +284,7 @@
 					"-lopencv_imgproc",
 					"-lopencv_videoio",
 					"-lopencv_imgcodecs",
+					"-lopencv_calib3d",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
