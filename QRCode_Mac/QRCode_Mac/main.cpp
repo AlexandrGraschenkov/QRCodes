@@ -24,12 +24,13 @@ int main(int argc, const char * argv[]) {
     Mat grayImg;
     cvtColor(img, grayImg, CV_BGR2GRAY);
     threshold(grayImg, grayImg, 110, 255, CV_THRESH_BINARY);
-    vector<Point2f> foundedPoints = findDots(grayImg);
+    vector<Dot> foundedPoints = findDots(grayImg);
     
     Mat debugImg;
     cvtColor(grayImg, debugImg, CV_GRAY2BGR);
-    for (Point2f p : foundedPoints) {
-        circle(debugImg, p, 3, CV_RGB(0, 255, 0), CV_FILLED);
+    for (Dot p : foundedPoints) {
+        circle(debugImg, p.pos, 3, CV_RGB(0, 255, 0), CV_FILLED);
+        rectangle(debugImg, p.area, CV_RGB(0, 255, 0), 2);
     }
     
     imshow("Source", img);
