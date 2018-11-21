@@ -26,7 +26,7 @@ cv::Mat extractQR(const cv::Mat &grayImg, std::vector<Dot> dots) {
     }
     
     Size outSize(200, 200);
-    float offset = 20;
+    float offset = 16;
     vector<Point> dstPoints = { Point2f(offset, offset),
                                 Point2f(outSize.width - offset, offset),
                                 Point2f(outSize.width - offset, outSize.height - offset),

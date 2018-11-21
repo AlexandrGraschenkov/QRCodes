@@ -11,6 +11,7 @@
 		FA0C13BC21A4A601008A08A2 /* qr_image.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA0C13BB21A4A5E9008A08A2 /* qr_image.jpg */; };
 		FA0C13BF21A4B0F4008A08A2 /* dot_detector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0C13BD21A4B0F4008A08A2 /* dot_detector.cpp */; };
 		FA0C13C221A5FA5A008A08A2 /* qr_image_extractor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0C13C021A5FA5A008A08A2 /* qr_image_extractor.cpp */; };
+		FA0C13C821A600C5008A08A2 /* data_extractor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0C13C621A600C5008A08A2 /* data_extractor.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		FA0C13BE21A4B0F4008A08A2 /* dot_detector.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = dot_detector.hpp; sourceTree = "<group>"; };
 		FA0C13C021A5FA5A008A08A2 /* qr_image_extractor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = qr_image_extractor.cpp; sourceTree = "<group>"; };
 		FA0C13C121A5FA5A008A08A2 /* qr_image_extractor.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = qr_image_extractor.hpp; sourceTree = "<group>"; };
+		FA0C13C621A600C5008A08A2 /* data_extractor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = data_extractor.cpp; sourceTree = "<group>"; };
+		FA0C13C721A600C5008A08A2 /* data_extractor.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = data_extractor.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 			children = (
 				FA0C13C021A5FA5A008A08A2 /* qr_image_extractor.cpp */,
 				FA0C13C121A5FA5A008A08A2 /* qr_image_extractor.hpp */,
+				FA0C13C621A600C5008A08A2 /* data_extractor.cpp */,
+				FA0C13C721A600C5008A08A2 /* data_extractor.hpp */,
 				FA0C13BD21A4B0F4008A08A2 /* dot_detector.cpp */,
 				FA0C13BE21A4B0F4008A08A2 /* dot_detector.hpp */,
 				FA0C13B421A4A484008A08A2 /* main.cpp */,
@@ -132,6 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA0C13C821A600C5008A08A2 /* data_extractor.cpp in Sources */,
 				FA0C13C221A5FA5A008A08A2 /* qr_image_extractor.cpp in Sources */,
 				FA0C13B521A4A484008A08A2 /* main.cpp in Sources */,
 				FA0C13BF21A4B0F4008A08A2 /* dot_detector.cpp in Sources */,

@@ -13,6 +13,7 @@
 
 #include "dot_detector.hpp"
 #include "qr_image_extractor.hpp"
+#include "data_extractor.hpp"
 
 using namespace std;
 using namespace cv;
@@ -34,6 +35,9 @@ int main(int argc, const char * argv[]) {
         rectangle(debugImg, p.area, CV_RGB(0, 255, 0), 2);
     }
     Mat extracted = extractQR(grayImg, foundedDots);
+    if (extracted.cols > 0) {
+        getQRData(extracted, 20);
+    }
     
     imshow("Source", img);
     imshow("Founded points", debugImg);
