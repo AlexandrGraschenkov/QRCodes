@@ -14,13 +14,40 @@
 #include "dot_detector.hpp"
 #include "qr_image_extractor.hpp"
 #include "data_extractor.hpp"
+#include "alphabet.hpp"
 
 using namespace std;
 using namespace cv;
 
+void testMessageCorrection() {
+    cout << "---- Run Test Damage Data ----\n";
+    int damageCount = 4;
+    cout << "Damage bits count " << damageCount << endl << endl;
+    vector<string> messages = {"Hello", "world", "we", "can", "any", "message that we want"};
+    Alphabet alphabet(30);
+    for (string message : messages) {
+        vector<bool> bits = alphabet.encode(message);
+        // повреждаем данные
+        for (int i = 0; i < damageCount; i++) {
+            int idx = arc4random() % bits.size();
+            bits[idx] = !bits[idx];
+        }
+        string encodedMessage = alphabet.decode(bits);
+        cout << "\"" << message << "\" => \"" << encodedMessage << "\" ";
+        
+        if (message == encodedMessage) {
+            cout << "Success" << endl;
+        } else {
+            cout << "Error" << endl;
+        }
+    }
+}
+
 int main(int argc, const char * argv[]) {
     // insert code here...
-    std::cout << "Hello, World!\n";
+    std::cout << "Hello, World!\n\n";
+    testMessageCorrection();
+    return 0;
     
     Mat img = imread("qr_image.jpg");
     Mat grayImg;
