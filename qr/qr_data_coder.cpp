@@ -9,8 +9,12 @@
 #include "qr_data_coder.hpp"
 #include <math.h>
 #include <iostream>
+#include <opencv2/core.hpp>
+#include <opencv2/imgproc.hpp>
+#include "image_data_extractor.hpp"
 
 using namespace std;
+using namespace cv;
 
 Group& QRData::group(int n) {
     if (n == 0) {
@@ -192,4 +196,30 @@ int QRDataCoder::getRowSize() const {
     return ceil(bitsCount / (double)rowsCount) + 2;
 }
 
+std::string QRDataCoder::processQRCode(const cv::Mat &colorImg, cv::Mat *warpedQRImage) {
+    if (colorImg.channels() == 1) {
+        threshold(colorImg, grayImg, 110, 255, CV_THRESH_BINARY);
+    } else {
+        cvtColor(colorImg, grayImg, CV_BGR2GRAY);
+        threshold(grayImg, grayImg, 110, 255, CV_THRESH_BINARY);
+    }
+    
+    vector<Dot> foundedDots = findDots(grayImg);
+    
+//    Mat debugImg;
+//    cvtColor(grayImg, debugImg, CV_GRAY2BGR);
+//    for (Dot p : foundedDots) {
+//        circle(debugImg, p.pos, 3, CV_RGB(0, 255, 0), CV_FILLED);
+//        rectangle(debugImg, p.area, CV_RGB(0, 255, 0), 2);
+//    }
+    Mat extracted = extractQRArea(grayImg, foundedDots);
+    if (extracted.cols > 0) {
+        QRDataCoder coder;
+        QRData data = getQRBitsData(extracted, coder.getRowSize(), warpedQRImage);
+        string str = coder.decode(data);
+        return str;
+    }
+    
+    return "";
+}
 

@@ -191,7 +191,7 @@ std::vector<Dot> findDots(const cv::Mat &grayImg) {
     vector<Dot> result;
     
     // ищем определенную последовательность чбчбч пикселей
-    for (int r = 0; r < grayImg.rows; r++) {
+    for (int r = 0; r < grayImg.rows; r += 2) {
         int sequence[] = {0, 0, 0, 0, 0};
         //                ч, б, ч, б, ч
         // ч - черный, б - белый

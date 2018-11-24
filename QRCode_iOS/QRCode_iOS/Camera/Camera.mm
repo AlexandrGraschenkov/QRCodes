@@ -74,7 +74,7 @@
 #if TARGET_IPHONE_SIMULATOR
     return;
 #endif
-    int fps = 30;
+    int fps = 60;
     AVCaptureDevice *backCamera = [self backCamera];
     [session addInput:[AVCaptureDeviceInput deviceInputWithDevice:backCamera error:nil]];
     
@@ -84,8 +84,8 @@
     [videoOut setSampleBufferDelegate:self queue:bgQueue];
     
     // Set the video output to store frame in BGRA (It is supposed to be faster)
-    videoOut.videoSettings = @{(id)kCVPixelBufferPixelFormatTypeKey: @(kCVPixelFormatType_32BGRA)};
-//    videoOut.videoSettings = @{(id)kCVPixelBufferPixelFormatTypeKey : @(kCVPixelFormatType_420YpCbCr8BiPlanarFullRange)};
+//    videoOut.videoSettings = @{(id)kCVPixelBufferPixelFormatTypeKey: @(kCVPixelFormatType_32BGRA)};
+    videoOut.videoSettings = @{(id)kCVPixelBufferPixelFormatTypeKey : @(kCVPixelFormatType_420YpCbCr8BiPlanarFullRange)};
 
     [session addOutput:videoOut];
     [session setSessionPreset:AVCaptureSessionPreset1280x720];
@@ -144,12 +144,12 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
         
         int format_opencv;
         
-        format_opencv = CV_8UC4;
+        format_opencv = CV_8UC1;
         
-        bufferAddress = CVPixelBufferGetBaseAddress(imageBuffer);
-        width = CVPixelBufferGetWidth(imageBuffer);
-        height = CVPixelBufferGetHeight(imageBuffer);
-        bytesPerRow = CVPixelBufferGetBytesPerRow(imageBuffer);
+        bufferAddress = CVPixelBufferGetBaseAddressOfPlane(imageBuffer, 0);
+        width = CVPixelBufferGetWidthOfPlane(imageBuffer, 0);
+        height = CVPixelBufferGetHeightOfPlane(imageBuffer, 0);
+        bytesPerRow = CVPixelBufferGetBytesPerRowOfPlane(imageBuffer, 0);
         
         cv::Mat image((int)height, (int)width, format_opencv, bufferAddress, bytesPerRow);
         [self.delegate cameraImageRecordered:image];

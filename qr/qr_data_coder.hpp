@@ -36,6 +36,7 @@ typedef struct QRData {
 
 class QRDataCoder {
     Alphabet alphabet;
+    cv::Mat grayImg;
 public:
     QRDataCoder(int messageSize = 30,
                 double correctPercentSize = 0.4);
@@ -43,6 +44,7 @@ public:
     QRData encode(std::string message);
     
     int getRowSize() const;
+    std::string processQRCode(const cv::Mat &colorImg, cv::Mat *warpedQRImage = nullptr);
 };
 
 

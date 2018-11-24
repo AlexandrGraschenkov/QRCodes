@@ -10,13 +10,14 @@
 #import "Camera.h"
 #import "UIView+Mat.h"
 #import <opencv2/imgproc.hpp>
-#include "process_qr.hpp"
 #include "fps.hpp"
+#include "qr_data_coder.hpp"
 
 @interface ViewController () <CameraDelegate> {
     Camera *cam;
     FPS *fps;
     FPSIteration *fpsIter;
+    QRDataCoder coder;
 }
 @property (atomic, assign) BOOL captureNextImage;
 @property (nonatomic, weak) IBOutlet UIView *previewView;
@@ -53,9 +54,13 @@
 - (void)cameraImageRecordered:(cv::Mat&)img {
     fpsIter->start();
     cv::Mat outMat;
-    std::string str = processQRCode(img, &outMat);
+    std::string str = coder.processQRCode(img, &outMat);
     fpsIter->end();
     fps->tick();
+    
+    if (outMat.cols) {
+        [self.previewView displayContentMat:outMat];
+    }
     NSString *dispStr = [NSString stringWithUTF8String:str.c_str()];
     
     double fpsVal = fps->getFPS();
@@ -65,9 +70,6 @@
             self.recogLabel.text = dispStr;
         } else {
             self.recogLabel.text = @"-";
-        }
-        if (outMat.cols) {
-            [self.previewView displayContentMat:outMat];
         }
         
         self.fpsLabel.text = [NSString stringWithFormat:@"Fps: %.2lf; Process: %.2lf", fpsVal, fpsProcess];

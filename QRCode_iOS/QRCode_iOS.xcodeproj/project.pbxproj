@@ -18,7 +18,6 @@
 		FA05F47B219B599F00107E1C /* UIView+Mat.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA05F47A219B599F00107E1C /* UIView+Mat.mm */; };
 		FAD0872921A9247A009A1F5C /* alphabet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD0871221A9247A009A1F5C /* alphabet.cpp */; };
 		FAD0872A21A9247A009A1F5C /* qr_data_coder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD0871321A9247A009A1F5C /* qr_data_coder.cpp */; };
-		FAD0872B21A9247A009A1F5C /* qr_image_extractor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD0871421A9247A009A1F5C /* qr_image_extractor.cpp */; };
 		FAD0872C21A9247A009A1F5C /* image_data_extractor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD0871821A9247A009A1F5C /* image_data_extractor.cpp */; };
 		FAD0872D21A9247A009A1F5C /* GenericGF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD0871A21A9247A009A1F5C /* GenericGF.cpp */; };
 		FAD0872E21A9247A009A1F5C /* ReedSolomonException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD0871B21A9247A009A1F5C /* ReedSolomonException.cpp */; };
@@ -29,7 +28,6 @@
 		FAD0873321A9247A009A1F5C /* dot_detector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD0872821A9247A009A1F5C /* dot_detector.cpp */; };
 		FAD0873621A92498009A1F5C /* QRCodeDrawer.mm in Sources */ = {isa = PBXBuildFile; fileRef = FAD0873521A92498009A1F5C /* QRCodeDrawer.mm */; };
 		FAD0873921A9454C009A1F5C /* QRDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD0873821A9454C009A1F5C /* QRDisplayController.m */; };
-		FAD0873C21A9472D009A1F5C /* process_qr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD0873A21A9472D009A1F5C /* process_qr.cpp */; };
 		FAD0873F21A95EC9009A1F5C /* fps.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD0873D21A95EC8009A1F5C /* fps.cpp */; };
 /* End PBXBuildFile section */
 
@@ -55,10 +53,8 @@
 		FAD0871121A9247A009A1F5C /* dot_detector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = dot_detector.hpp; sourceTree = "<group>"; };
 		FAD0871221A9247A009A1F5C /* alphabet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = alphabet.cpp; sourceTree = "<group>"; };
 		FAD0871321A9247A009A1F5C /* qr_data_coder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = qr_data_coder.cpp; sourceTree = "<group>"; };
-		FAD0871421A9247A009A1F5C /* qr_image_extractor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = qr_image_extractor.cpp; sourceTree = "<group>"; };
 		FAD0871521A9247A009A1F5C /* alphabet.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = alphabet.hpp; sourceTree = "<group>"; };
 		FAD0871621A9247A009A1F5C /* qr_data_coder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = qr_data_coder.hpp; sourceTree = "<group>"; };
-		FAD0871721A9247A009A1F5C /* qr_image_extractor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = qr_image_extractor.hpp; sourceTree = "<group>"; };
 		FAD0871821A9247A009A1F5C /* image_data_extractor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = image_data_extractor.cpp; sourceTree = "<group>"; };
 		FAD0871A21A9247A009A1F5C /* GenericGF.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GenericGF.cpp; sourceTree = "<group>"; };
 		FAD0871B21A9247A009A1F5C /* ReedSolomonException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ReedSolomonException.cpp; sourceTree = "<group>"; };
@@ -79,8 +75,6 @@
 		FAD0873521A92498009A1F5C /* QRCodeDrawer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = QRCodeDrawer.mm; sourceTree = "<group>"; };
 		FAD0873721A9454C009A1F5C /* QRDisplayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRDisplayController.h; sourceTree = "<group>"; };
 		FAD0873821A9454C009A1F5C /* QRDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRDisplayController.m; sourceTree = "<group>"; };
-		FAD0873A21A9472D009A1F5C /* process_qr.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = process_qr.cpp; sourceTree = "<group>"; };
-		FAD0873B21A9472D009A1F5C /* process_qr.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = process_qr.hpp; sourceTree = "<group>"; };
 		FAD0873D21A95EC8009A1F5C /* fps.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fps.cpp; sourceTree = "<group>"; };
 		FAD0873E21A95EC9009A1F5C /* fps.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fps.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,19 +163,15 @@
 		FAD0870F21A9247A009A1F5C /* qr */ = {
 			isa = PBXGroup;
 			children = (
-				FAD0871021A9247A009A1F5C /* image_data_extractor.hpp */,
-				FAD0871121A9247A009A1F5C /* dot_detector.hpp */,
-				FAD0871221A9247A009A1F5C /* alphabet.cpp */,
-				FAD0871321A9247A009A1F5C /* qr_data_coder.cpp */,
-				FAD0871421A9247A009A1F5C /* qr_image_extractor.cpp */,
-				FAD0871521A9247A009A1F5C /* alphabet.hpp */,
-				FAD0871621A9247A009A1F5C /* qr_data_coder.hpp */,
-				FAD0871721A9247A009A1F5C /* qr_image_extractor.hpp */,
-				FAD0871821A9247A009A1F5C /* image_data_extractor.cpp */,
 				FAD0871921A9247A009A1F5C /* reedsolomon */,
+				FAD0871121A9247A009A1F5C /* dot_detector.hpp */,
 				FAD0872821A9247A009A1F5C /* dot_detector.cpp */,
-				FAD0873A21A9472D009A1F5C /* process_qr.cpp */,
-				FAD0873B21A9472D009A1F5C /* process_qr.hpp */,
+				FAD0871521A9247A009A1F5C /* alphabet.hpp */,
+				FAD0871221A9247A009A1F5C /* alphabet.cpp */,
+				FAD0871621A9247A009A1F5C /* qr_data_coder.hpp */,
+				FAD0871321A9247A009A1F5C /* qr_data_coder.cpp */,
+				FAD0871021A9247A009A1F5C /* image_data_extractor.hpp */,
+				FAD0871821A9247A009A1F5C /* image_data_extractor.cpp */,
 			);
 			name = qr;
 			path = ../../qr;
@@ -327,8 +317,6 @@
 				FA05F461219B579E00107E1C /* AppDelegate.m in Sources */,
 				FAD0872C21A9247A009A1F5C /* image_data_extractor.cpp in Sources */,
 				FAD0873021A9247A009A1F5C /* ReedSolomon.cpp in Sources */,
-				FAD0872B21A9247A009A1F5C /* qr_image_extractor.cpp in Sources */,
-				FAD0873C21A9472D009A1F5C /* process_qr.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
