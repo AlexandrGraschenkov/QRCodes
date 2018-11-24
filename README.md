@@ -5,4 +5,4 @@ Example how to build you own QR codes (like Facebook do, but much better)
 
 On iPhone 6 works 60 fps.
 
-Presentation: [video](https://youtu.be/77TUO-IZmco), [slides]()
+Presentation: [video](https://youtu.be/77TUO-IZmco), [slides](https://docs.google.com/presentation/d/1DnQUiRQfWjpuvgDIHeuLvMCu8T2i7dvCLLhA81MNGKw/edit?usp=sharing)
