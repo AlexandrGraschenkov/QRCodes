@@ -11,7 +11,6 @@
 		FA0C13BC21A4A601008A08A2 /* qr_image.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA0C13BB21A4A5E9008A08A2 /* qr_image.jpg */; };
 		FAD0870421A9245F009A1F5C /* alphabet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD086ED21A9245F009A1F5C /* alphabet.cpp */; };
 		FAD0870521A9245F009A1F5C /* qr_data_coder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD086EE21A9245F009A1F5C /* qr_data_coder.cpp */; };
-		FAD0870621A9245F009A1F5C /* qr_image_extractor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD086EF21A9245F009A1F5C /* qr_image_extractor.cpp */; };
 		FAD0870721A9245F009A1F5C /* image_data_extractor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD086F321A9245F009A1F5C /* image_data_extractor.cpp */; };
 		FAD0870821A9245F009A1F5C /* GenericGF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD086F521A9245F009A1F5C /* GenericGF.cpp */; };
 		FAD0870921A9245F009A1F5C /* ReedSolomonException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD086F621A9245F009A1F5C /* ReedSolomonException.cpp */; };
@@ -43,10 +42,8 @@
 		FAD086EC21A9245F009A1F5C /* dot_detector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = dot_detector.hpp; sourceTree = "<group>"; };
 		FAD086ED21A9245F009A1F5C /* alphabet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = alphabet.cpp; sourceTree = "<group>"; };
 		FAD086EE21A9245F009A1F5C /* qr_data_coder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = qr_data_coder.cpp; sourceTree = "<group>"; };
-		FAD086EF21A9245F009A1F5C /* qr_image_extractor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = qr_image_extractor.cpp; sourceTree = "<group>"; };
 		FAD086F021A9245F009A1F5C /* alphabet.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = alphabet.hpp; sourceTree = "<group>"; };
 		FAD086F121A9245F009A1F5C /* qr_data_coder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = qr_data_coder.hpp; sourceTree = "<group>"; };
-		FAD086F221A9245F009A1F5C /* qr_image_extractor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = qr_image_extractor.hpp; sourceTree = "<group>"; };
 		FAD086F321A9245F009A1F5C /* image_data_extractor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = image_data_extractor.cpp; sourceTree = "<group>"; };
 		FAD086F521A9245F009A1F5C /* GenericGF.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GenericGF.cpp; sourceTree = "<group>"; };
 		FAD086F621A9245F009A1F5C /* ReedSolomonException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ReedSolomonException.cpp; sourceTree = "<group>"; };
@@ -109,10 +106,8 @@
 				FAD086EC21A9245F009A1F5C /* dot_detector.hpp */,
 				FAD086ED21A9245F009A1F5C /* alphabet.cpp */,
 				FAD086EE21A9245F009A1F5C /* qr_data_coder.cpp */,
-				FAD086EF21A9245F009A1F5C /* qr_image_extractor.cpp */,
 				FAD086F021A9245F009A1F5C /* alphabet.hpp */,
 				FAD086F121A9245F009A1F5C /* qr_data_coder.hpp */,
-				FAD086F221A9245F009A1F5C /* qr_image_extractor.hpp */,
 				FAD086F321A9245F009A1F5C /* image_data_extractor.cpp */,
 				FAD086F421A9245F009A1F5C /* reedsolomon */,
 				FAD0870321A9245F009A1F5C /* dot_detector.cpp */,
@@ -207,7 +202,6 @@
 				FAD0870B21A9245F009A1F5C /* ReedSolomon.cpp in Sources */,
 				FAD0870821A9245F009A1F5C /* GenericGF.cpp in Sources */,
 				FA0C13B521A4A484008A08A2 /* main.cpp in Sources */,
-				FAD0870621A9245F009A1F5C /* qr_image_extractor.cpp in Sources */,
 				FAD0870921A9245F009A1F5C /* ReedSolomonException.cpp in Sources */,
 				FAD0870721A9245F009A1F5C /* image_data_extractor.cpp in Sources */,
 			);

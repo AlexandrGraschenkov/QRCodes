@@ -12,7 +12,6 @@
 #include <opencv2/imgproc.hpp>
 
 #include "dot_detector.hpp"
-#include "qr_image_extractor.hpp"
 #include "image_data_extractor.hpp"
 #include "alphabet.hpp"
 
@@ -61,7 +60,7 @@ int main(int argc, const char * argv[]) {
         circle(debugImg, p.pos, 3, CV_RGB(0, 255, 0), CV_FILLED);
         rectangle(debugImg, p.area, CV_RGB(0, 255, 0), 2);
     }
-    Mat extracted = extractQR(grayImg, foundedDots);
+    Mat extracted = extractQRArea(grayImg, foundedDots);
     if (extracted.cols > 0) {
         QRDataCoder coder;
         QRData data = getQRBitsData(extracted, 22);
