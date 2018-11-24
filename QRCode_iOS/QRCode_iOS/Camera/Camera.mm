@@ -71,6 +71,9 @@
 }
 
 - (void)setupVideo {
+#if TARGET_IPHONE_SIMULATOR
+    return;
+#endif
     int fps = 30;
     AVCaptureDevice *backCamera = [self backCamera];
     [session addInput:[AVCaptureDeviceInput deviceInputWithDevice:backCamera error:nil]];

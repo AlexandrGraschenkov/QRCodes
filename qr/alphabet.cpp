@@ -67,6 +67,7 @@ std::vector<bool> Alphabet::encode(std::string str) {
         errorMessage = "Error on encode data";
         return vector<bool>();
     }
+    
     vector<bool> bits = data2bits(data);
     return bits;
 }

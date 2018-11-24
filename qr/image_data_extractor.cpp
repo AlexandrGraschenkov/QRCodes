@@ -1,12 +1,12 @@
 //
-//  data_extractor.cpp
+//  image_data_extractor.cpp
 //  QRCode_Mac
 //
 //  Created by Alexander Graschenkov on 22/11/2018.
 //  Copyright © 2018 Alex Development. All rights reserved.
 //
 
-#include "data_extractor.hpp"
+#include "image_data_extractor.hpp"
 #include <opencv2/highgui.hpp>
 #include <opencv2/imgproc.hpp>
 
@@ -37,19 +37,21 @@ Point2f applyTransform(Point2f p, Size size, Side side) {
     return p;
 }
 
-QRData getQRData(const cv::Mat &grayImg, int rowSize) {
-    Mat debugImg;
-    cvtColor(grayImg, debugImg, CV_GRAY2BGR);
+QRData getQRBitsData(const cv::Mat &grayImg, int rowSize, Mat *debugImg) {
+    if (debugImg) {
+        cvtColor(grayImg, *debugImg, CV_GRAY2BGR);
+    }
     
-    int startOffset = 40;
+    int startOffset = 43;
     int borderOffset = 4;
-    int step = 11;
-    int dataWidth = 5;
+    int step = 10;
+    int dataWidth = 3;
     int dataSize = grayImg.cols - startOffset * 2;
     
-    
+    QRData qr;
     for (int side = 0; side < 4; side++) {
         for (int level = 0; level < 3; level++) {
+            qr.group(side).row(2-level).resize(rowSize , false);
             for (int i = 0; i < rowSize; i++) {
                 float dataPercent = i / (float)(rowSize-1);
                 Point2f center(startOffset + dataPercent * dataSize, level * step + borderOffset);
@@ -59,16 +61,19 @@ QRData getQRData(const cv::Mat &grayImg, int rowSize) {
                        2 * dataWidth / 3 + 1,
                        2 * dataWidth / 3 + 1);
                 bool isFilled = (mean(grayImg(r))[0] < 100);
-                rectangeWithAlpha(debugImg, r, isFilled ? CV_RGB(0, 255, 0) : CV_RGB(255, 0, 0), 0.5);
+                if (debugImg) {
+                    rectangeWithAlpha(*debugImg, r, isFilled ? CV_RGB(0, 255, 0) : CV_RGB(255, 0, 0), 0.5);
+                }
                 
-                Mat temp;
-                pyrUp(debugImg, temp);
-                imshow("Data", temp);
-                waitKey(1);
+                qr.group(side).row(2-level)[i] = isFilled;
+//                Mat temp;
+//                pyrUp(debugImg, temp);
+//                imshow("Data", temp);
+//                waitKey(1);
             }
         }
     }
     
-    waitKey();
-    return QRData();
+//    waitKey();
+    return qr;
 }

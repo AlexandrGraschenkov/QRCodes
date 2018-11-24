@@ -13,7 +13,7 @@
 
 #include "dot_detector.hpp"
 #include "qr_image_extractor.hpp"
-#include "data_extractor.hpp"
+#include "image_data_extractor.hpp"
 #include "alphabet.hpp"
 
 using namespace std;
@@ -46,10 +46,10 @@ void testMessageCorrection() {
 int main(int argc, const char * argv[]) {
     // insert code here...
     std::cout << "Hello, World!\n\n";
-    testMessageCorrection();
-    return 0;
+//    testMessageCorrection();
+//    return 0;
     
-    Mat img = imread("qr_image.jpg");
+    Mat img = imread("/Users/alex/Desktop/test_qr.png");
     Mat grayImg;
     cvtColor(img, grayImg, CV_BGR2GRAY);
     threshold(grayImg, grayImg, 110, 255, CV_THRESH_BINARY);
@@ -63,7 +63,10 @@ int main(int argc, const char * argv[]) {
     }
     Mat extracted = extractQR(grayImg, foundedDots);
     if (extracted.cols > 0) {
-        getQRData(extracted, 20);
+        QRDataCoder coder;
+        QRData data = getQRBitsData(extracted, 22);
+        string str = coder.decode(data);
+        cout << str << endl;
     }
     
     imshow("Source", img);

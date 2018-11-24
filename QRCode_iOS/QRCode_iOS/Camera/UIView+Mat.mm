@@ -11,10 +11,7 @@
 @implementation UIView (Mat)
 
 - (void)displayContentMat:(cv::Mat)image {
-    CGImage* dstImage;
-    
     CGColorSpaceRef colorSpace;
-    CGContextRef context;
     
     // check if matrix data pointer or dimensions were changed by the delegate
     bool iOSimage = true;
@@ -34,6 +31,7 @@
         } else {
             bitmapInfo |= kCGBitmapByteOrder32Big;
         }
+        bitmapInfo = kCGBitmapByteOrder32Little | kCGImageAlphaNone;
     } else {
         colorSpace = CGColorSpaceCreateDeviceRGB();
         bitmapInfo = kCGImageAlphaPremultipliedFirst;
@@ -44,21 +42,33 @@
         }
     }
     
-    context = CGBitmapContextCreate(image.data, image.cols, image.rows, 8, image.step1(), colorSpace, bitmapInfo);
-    dstImage = CGBitmapContextCreateImage(context);
-    CGContextRelease(context);
+    NSData *data = [NSData dataWithBytes:image.data length:image.step.p[0]*image.rows];
+    CGDataProviderRef provider = CGDataProviderCreateWithCFData((__bridge CFDataRef)data);
+    CGImageRef imageRef = CGImageCreate(
+                                        image.cols,                 //width
+                                        image.rows,                 //height
+                                        8,                          //bits per component
+                                        8 * image.elemSize(),       //bits per pixel
+                                        image.step[0],              //bytesPerRow
+                                        colorSpace,                 //colorspace
+                                        bitmapInfo,                 // bitmap info
+                                        provider,                   //CGDataProviderRef
+                                        NULL,                       //decode
+                                        false,                      //should interpolate
+                                        kCGRenderingIntentDefault   //intent
+                                        );
     
     // render buffer
     if ([NSThread isMainThread]) {
-        self.layer.contents = (__bridge id)dstImage;
+        self.layer.contents = (__bridge id)imageRef;
     } else {
         dispatch_sync(dispatch_get_main_queue(), ^{
-            self.layer.contents = (__bridge id)dstImage;
+            self.layer.contents = (__bridge id)imageRef;
         });
     }
     
     // cleanup
-    CGImageRelease(dstImage);
+    CGImageRelease(imageRef);
     
     CGColorSpaceRelease(colorSpace);
 }

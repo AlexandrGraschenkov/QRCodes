@@ -16,6 +16,21 @@
 		FA05F46F219B579F00107E1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA05F46E219B579F00107E1C /* main.m */; };
 		FA05F477219B57CB00107E1C /* Camera.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA05F476219B57CB00107E1C /* Camera.mm */; };
 		FA05F47B219B599F00107E1C /* UIView+Mat.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA05F47A219B599F00107E1C /* UIView+Mat.mm */; };
+		FAD0872921A9247A009A1F5C /* alphabet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD0871221A9247A009A1F5C /* alphabet.cpp */; };
+		FAD0872A21A9247A009A1F5C /* qr_data_coder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD0871321A9247A009A1F5C /* qr_data_coder.cpp */; };
+		FAD0872B21A9247A009A1F5C /* qr_image_extractor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD0871421A9247A009A1F5C /* qr_image_extractor.cpp */; };
+		FAD0872C21A9247A009A1F5C /* image_data_extractor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD0871821A9247A009A1F5C /* image_data_extractor.cpp */; };
+		FAD0872D21A9247A009A1F5C /* GenericGF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD0871A21A9247A009A1F5C /* GenericGF.cpp */; };
+		FAD0872E21A9247A009A1F5C /* ReedSolomonException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD0871B21A9247A009A1F5C /* ReedSolomonException.cpp */; };
+		FAD0872F21A9247A009A1F5C /* GenericGFPoly.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD0871E21A9247A009A1F5C /* GenericGFPoly.cpp */; };
+		FAD0873021A9247A009A1F5C /* ReedSolomon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD0872021A9247A009A1F5C /* ReedSolomon.cpp */; };
+		FAD0873121A9247A009A1F5C /* ReedSolomonDecoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD0872221A9247A009A1F5C /* ReedSolomonDecoder.cpp */; };
+		FAD0873221A9247A009A1F5C /* ReedSolomonEncoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD0872521A9247A009A1F5C /* ReedSolomonEncoder.cpp */; };
+		FAD0873321A9247A009A1F5C /* dot_detector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD0872821A9247A009A1F5C /* dot_detector.cpp */; };
+		FAD0873621A92498009A1F5C /* QRCodeDrawer.mm in Sources */ = {isa = PBXBuildFile; fileRef = FAD0873521A92498009A1F5C /* QRCodeDrawer.mm */; };
+		FAD0873921A9454C009A1F5C /* QRDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD0873821A9454C009A1F5C /* QRDisplayController.m */; };
+		FAD0873C21A9472D009A1F5C /* process_qr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD0873A21A9472D009A1F5C /* process_qr.cpp */; };
+		FAD0873F21A95EC9009A1F5C /* fps.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD0873D21A95EC8009A1F5C /* fps.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +51,38 @@
 		FA05F476219B57CB00107E1C /* Camera.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Camera.mm; sourceTree = "<group>"; };
 		FA05F479219B599F00107E1C /* UIView+Mat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Mat.h"; sourceTree = "<group>"; };
 		FA05F47A219B599F00107E1C /* UIView+Mat.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIView+Mat.mm"; sourceTree = "<group>"; };
+		FAD0871021A9247A009A1F5C /* image_data_extractor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = image_data_extractor.hpp; sourceTree = "<group>"; };
+		FAD0871121A9247A009A1F5C /* dot_detector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = dot_detector.hpp; sourceTree = "<group>"; };
+		FAD0871221A9247A009A1F5C /* alphabet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = alphabet.cpp; sourceTree = "<group>"; };
+		FAD0871321A9247A009A1F5C /* qr_data_coder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = qr_data_coder.cpp; sourceTree = "<group>"; };
+		FAD0871421A9247A009A1F5C /* qr_image_extractor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = qr_image_extractor.cpp; sourceTree = "<group>"; };
+		FAD0871521A9247A009A1F5C /* alphabet.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = alphabet.hpp; sourceTree = "<group>"; };
+		FAD0871621A9247A009A1F5C /* qr_data_coder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = qr_data_coder.hpp; sourceTree = "<group>"; };
+		FAD0871721A9247A009A1F5C /* qr_image_extractor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = qr_image_extractor.hpp; sourceTree = "<group>"; };
+		FAD0871821A9247A009A1F5C /* image_data_extractor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = image_data_extractor.cpp; sourceTree = "<group>"; };
+		FAD0871A21A9247A009A1F5C /* GenericGF.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GenericGF.cpp; sourceTree = "<group>"; };
+		FAD0871B21A9247A009A1F5C /* ReedSolomonException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ReedSolomonException.cpp; sourceTree = "<group>"; };
+		FAD0871C21A9247A009A1F5C /* ReedSolomonDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReedSolomonDecoder.h; sourceTree = "<group>"; };
+		FAD0871D21A9247A009A1F5C /* Counted.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Counted.h; sourceTree = "<group>"; };
+		FAD0871E21A9247A009A1F5C /* GenericGFPoly.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GenericGFPoly.cpp; sourceTree = "<group>"; };
+		FAD0871F21A9247A009A1F5C /* GenericGF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenericGF.h; sourceTree = "<group>"; };
+		FAD0872021A9247A009A1F5C /* ReedSolomon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ReedSolomon.cpp; sourceTree = "<group>"; };
+		FAD0872121A9247A009A1F5C /* Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Array.h; sourceTree = "<group>"; };
+		FAD0872221A9247A009A1F5C /* ReedSolomonDecoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ReedSolomonDecoder.cpp; sourceTree = "<group>"; };
+		FAD0872321A9247A009A1F5C /* ReedSolomonException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReedSolomonException.h; sourceTree = "<group>"; };
+		FAD0872421A9247A009A1F5C /* ReedSolomonEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReedSolomonEncoder.h; sourceTree = "<group>"; };
+		FAD0872521A9247A009A1F5C /* ReedSolomonEncoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ReedSolomonEncoder.cpp; sourceTree = "<group>"; };
+		FAD0872621A9247A009A1F5C /* GenericGFPoly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenericGFPoly.h; sourceTree = "<group>"; };
+		FAD0872721A9247A009A1F5C /* ReedSolomon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReedSolomon.h; sourceTree = "<group>"; };
+		FAD0872821A9247A009A1F5C /* dot_detector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dot_detector.cpp; sourceTree = "<group>"; };
+		FAD0873421A92498009A1F5C /* QRCodeDrawer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeDrawer.h; sourceTree = "<group>"; };
+		FAD0873521A92498009A1F5C /* QRCodeDrawer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = QRCodeDrawer.mm; sourceTree = "<group>"; };
+		FAD0873721A9454C009A1F5C /* QRDisplayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRDisplayController.h; sourceTree = "<group>"; };
+		FAD0873821A9454C009A1F5C /* QRDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRDisplayController.m; sourceTree = "<group>"; };
+		FAD0873A21A9472D009A1F5C /* process_qr.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = process_qr.cpp; sourceTree = "<group>"; };
+		FAD0873B21A9472D009A1F5C /* process_qr.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = process_qr.hpp; sourceTree = "<group>"; };
+		FAD0873D21A95EC8009A1F5C /* fps.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fps.cpp; sourceTree = "<group>"; };
+		FAD0873E21A95EC9009A1F5C /* fps.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fps.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +139,12 @@
 				FA05F460219B579E00107E1C /* AppDelegate.m */,
 				FA05F462219B579E00107E1C /* ViewController.h */,
 				FA05F463219B579E00107E1C /* ViewController.mm */,
+				FAD0873721A9454C009A1F5C /* QRDisplayController.h */,
+				FAD0873821A9454C009A1F5C /* QRDisplayController.m */,
+				FAD0873421A92498009A1F5C /* QRCodeDrawer.h */,
+				FAD0873521A92498009A1F5C /* QRCodeDrawer.mm */,
+				FAD0874021A95ECD009A1F5C /* Helpers */,
+				FAD0870F21A9247A009A1F5C /* qr */,
 				FA05F478219B57CE00107E1C /* Camera */,
 				FA05F465219B579E00107E1C /* Main.storyboard */,
 				FA05F468219B579F00107E1C /* Assets.xcassets */,
@@ -111,6 +164,57 @@
 				FA05F476219B57CB00107E1C /* Camera.mm */,
 			);
 			path = Camera;
+			sourceTree = "<group>";
+		};
+		FAD0870F21A9247A009A1F5C /* qr */ = {
+			isa = PBXGroup;
+			children = (
+				FAD0871021A9247A009A1F5C /* image_data_extractor.hpp */,
+				FAD0871121A9247A009A1F5C /* dot_detector.hpp */,
+				FAD0871221A9247A009A1F5C /* alphabet.cpp */,
+				FAD0871321A9247A009A1F5C /* qr_data_coder.cpp */,
+				FAD0871421A9247A009A1F5C /* qr_image_extractor.cpp */,
+				FAD0871521A9247A009A1F5C /* alphabet.hpp */,
+				FAD0871621A9247A009A1F5C /* qr_data_coder.hpp */,
+				FAD0871721A9247A009A1F5C /* qr_image_extractor.hpp */,
+				FAD0871821A9247A009A1F5C /* image_data_extractor.cpp */,
+				FAD0871921A9247A009A1F5C /* reedsolomon */,
+				FAD0872821A9247A009A1F5C /* dot_detector.cpp */,
+				FAD0873A21A9472D009A1F5C /* process_qr.cpp */,
+				FAD0873B21A9472D009A1F5C /* process_qr.hpp */,
+			);
+			name = qr;
+			path = ../../qr;
+			sourceTree = "<group>";
+		};
+		FAD0871921A9247A009A1F5C /* reedsolomon */ = {
+			isa = PBXGroup;
+			children = (
+				FAD0871A21A9247A009A1F5C /* GenericGF.cpp */,
+				FAD0871B21A9247A009A1F5C /* ReedSolomonException.cpp */,
+				FAD0871C21A9247A009A1F5C /* ReedSolomonDecoder.h */,
+				FAD0871D21A9247A009A1F5C /* Counted.h */,
+				FAD0871E21A9247A009A1F5C /* GenericGFPoly.cpp */,
+				FAD0871F21A9247A009A1F5C /* GenericGF.h */,
+				FAD0872021A9247A009A1F5C /* ReedSolomon.cpp */,
+				FAD0872121A9247A009A1F5C /* Array.h */,
+				FAD0872221A9247A009A1F5C /* ReedSolomonDecoder.cpp */,
+				FAD0872321A9247A009A1F5C /* ReedSolomonException.h */,
+				FAD0872421A9247A009A1F5C /* ReedSolomonEncoder.h */,
+				FAD0872521A9247A009A1F5C /* ReedSolomonEncoder.cpp */,
+				FAD0872621A9247A009A1F5C /* GenericGFPoly.h */,
+				FAD0872721A9247A009A1F5C /* ReedSolomon.h */,
+			);
+			path = reedsolomon;
+			sourceTree = "<group>";
+		};
+		FAD0874021A95ECD009A1F5C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FAD0873D21A95EC8009A1F5C /* fps.cpp */,
+				FAD0873E21A95EC9009A1F5C /* fps.hpp */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,11 +309,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD0873221A9247A009A1F5C /* ReedSolomonEncoder.cpp in Sources */,
+				FAD0873321A9247A009A1F5C /* dot_detector.cpp in Sources */,
 				FA05F464219B579E00107E1C /* ViewController.mm in Sources */,
 				FA05F46F219B579F00107E1C /* main.m in Sources */,
+				FAD0872E21A9247A009A1F5C /* ReedSolomonException.cpp in Sources */,
 				FA05F477219B57CB00107E1C /* Camera.mm in Sources */,
+				FAD0872F21A9247A009A1F5C /* GenericGFPoly.cpp in Sources */,
 				FA05F47B219B599F00107E1C /* UIView+Mat.mm in Sources */,
+				FAD0873621A92498009A1F5C /* QRCodeDrawer.mm in Sources */,
+				FAD0873121A9247A009A1F5C /* ReedSolomonDecoder.cpp in Sources */,
+				FAD0872D21A9247A009A1F5C /* GenericGF.cpp in Sources */,
+				FAD0872A21A9247A009A1F5C /* qr_data_coder.cpp in Sources */,
+				FAD0872921A9247A009A1F5C /* alphabet.cpp in Sources */,
+				FAD0873F21A95EC9009A1F5C /* fps.cpp in Sources */,
+				FAD0873921A9454C009A1F5C /* QRDisplayController.m in Sources */,
 				FA05F461219B579E00107E1C /* AppDelegate.m in Sources */,
+				FAD0872C21A9247A009A1F5C /* image_data_extractor.cpp in Sources */,
+				FAD0873021A9247A009A1F5C /* ReedSolomon.cpp in Sources */,
+				FAD0872B21A9247A009A1F5C /* qr_image_extractor.cpp in Sources */,
+				FAD0873C21A9472D009A1F5C /* process_qr.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

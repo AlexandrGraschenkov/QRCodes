@@ -9,16 +9,17 @@
 /* Begin PBXBuildFile section */
 		FA0C13B521A4A484008A08A2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0C13B421A4A484008A08A2 /* main.cpp */; };
 		FA0C13BC21A4A601008A08A2 /* qr_image.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA0C13BB21A4A5E9008A08A2 /* qr_image.jpg */; };
-		FA0C13BF21A4B0F4008A08A2 /* dot_detector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0C13BD21A4B0F4008A08A2 /* dot_detector.cpp */; };
-		FA0C13C221A5FA5A008A08A2 /* qr_image_extractor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0C13C021A5FA5A008A08A2 /* qr_image_extractor.cpp */; };
-		FA0C13C821A600C5008A08A2 /* data_extractor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0C13C621A600C5008A08A2 /* data_extractor.cpp */; };
-		FA0C13CB21A609EB008A08A2 /* alphabet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0C13C921A609EB008A08A2 /* alphabet.cpp */; };
-		FA0C13DB21A754CE008A08A2 /* GenericGF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0C13CD21A754CE008A08A2 /* GenericGF.cpp */; };
-		FA0C13DC21A754CE008A08A2 /* ReedSolomonException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0C13CE21A754CE008A08A2 /* ReedSolomonException.cpp */; };
-		FA0C13DD21A754CE008A08A2 /* GenericGFPoly.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0C13D121A754CE008A08A2 /* GenericGFPoly.cpp */; };
-		FA0C13DE21A754CE008A08A2 /* ReedSolomon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0C13D321A754CE008A08A2 /* ReedSolomon.cpp */; };
-		FA0C13DF21A754CE008A08A2 /* ReedSolomonDecoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0C13D521A754CE008A08A2 /* ReedSolomonDecoder.cpp */; };
-		FA0C13E021A754CE008A08A2 /* ReedSolomonEncoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0C13D821A754CE008A08A2 /* ReedSolomonEncoder.cpp */; };
+		FAD0870421A9245F009A1F5C /* alphabet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD086ED21A9245F009A1F5C /* alphabet.cpp */; };
+		FAD0870521A9245F009A1F5C /* qr_data_coder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD086EE21A9245F009A1F5C /* qr_data_coder.cpp */; };
+		FAD0870621A9245F009A1F5C /* qr_image_extractor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD086EF21A9245F009A1F5C /* qr_image_extractor.cpp */; };
+		FAD0870721A9245F009A1F5C /* image_data_extractor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD086F321A9245F009A1F5C /* image_data_extractor.cpp */; };
+		FAD0870821A9245F009A1F5C /* GenericGF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD086F521A9245F009A1F5C /* GenericGF.cpp */; };
+		FAD0870921A9245F009A1F5C /* ReedSolomonException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD086F621A9245F009A1F5C /* ReedSolomonException.cpp */; };
+		FAD0870A21A9245F009A1F5C /* GenericGFPoly.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD086F921A9245F009A1F5C /* GenericGFPoly.cpp */; };
+		FAD0870B21A9245F009A1F5C /* ReedSolomon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD086FB21A9245F009A1F5C /* ReedSolomon.cpp */; };
+		FAD0870C21A9245F009A1F5C /* ReedSolomonDecoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD086FD21A9245F009A1F5C /* ReedSolomonDecoder.cpp */; };
+		FAD0870D21A9245F009A1F5C /* ReedSolomonEncoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD0870021A9245F009A1F5C /* ReedSolomonEncoder.cpp */; };
+		FAD0870E21A9245F009A1F5C /* dot_detector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD0870321A9245F009A1F5C /* dot_detector.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,28 +39,30 @@
 		FA0C13B121A4A484008A08A2 /* QRCode_Mac */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = QRCode_Mac; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0C13B421A4A484008A08A2 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		FA0C13BB21A4A5E9008A08A2 /* qr_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = qr_image.jpg; sourceTree = "<group>"; };
-		FA0C13BD21A4B0F4008A08A2 /* dot_detector.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = dot_detector.cpp; sourceTree = "<group>"; };
-		FA0C13BE21A4B0F4008A08A2 /* dot_detector.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = dot_detector.hpp; sourceTree = "<group>"; };
-		FA0C13C021A5FA5A008A08A2 /* qr_image_extractor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = qr_image_extractor.cpp; sourceTree = "<group>"; };
-		FA0C13C121A5FA5A008A08A2 /* qr_image_extractor.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = qr_image_extractor.hpp; sourceTree = "<group>"; };
-		FA0C13C621A600C5008A08A2 /* data_extractor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = data_extractor.cpp; sourceTree = "<group>"; };
-		FA0C13C721A600C5008A08A2 /* data_extractor.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = data_extractor.hpp; sourceTree = "<group>"; };
-		FA0C13C921A609EB008A08A2 /* alphabet.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = alphabet.cpp; sourceTree = "<group>"; };
-		FA0C13CA21A609EB008A08A2 /* alphabet.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = alphabet.hpp; sourceTree = "<group>"; };
-		FA0C13CD21A754CE008A08A2 /* GenericGF.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GenericGF.cpp; sourceTree = "<group>"; };
-		FA0C13CE21A754CE008A08A2 /* ReedSolomonException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ReedSolomonException.cpp; sourceTree = "<group>"; };
-		FA0C13CF21A754CE008A08A2 /* ReedSolomonDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReedSolomonDecoder.h; sourceTree = "<group>"; };
-		FA0C13D021A754CE008A08A2 /* Counted.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Counted.h; sourceTree = "<group>"; };
-		FA0C13D121A754CE008A08A2 /* GenericGFPoly.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GenericGFPoly.cpp; sourceTree = "<group>"; };
-		FA0C13D221A754CE008A08A2 /* GenericGF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenericGF.h; sourceTree = "<group>"; };
-		FA0C13D321A754CE008A08A2 /* ReedSolomon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ReedSolomon.cpp; sourceTree = "<group>"; };
-		FA0C13D421A754CE008A08A2 /* Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Array.h; sourceTree = "<group>"; };
-		FA0C13D521A754CE008A08A2 /* ReedSolomonDecoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ReedSolomonDecoder.cpp; sourceTree = "<group>"; };
-		FA0C13D621A754CE008A08A2 /* ReedSolomonException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReedSolomonException.h; sourceTree = "<group>"; };
-		FA0C13D721A754CE008A08A2 /* ReedSolomonEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReedSolomonEncoder.h; sourceTree = "<group>"; };
-		FA0C13D821A754CE008A08A2 /* ReedSolomonEncoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ReedSolomonEncoder.cpp; sourceTree = "<group>"; };
-		FA0C13D921A754CE008A08A2 /* GenericGFPoly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenericGFPoly.h; sourceTree = "<group>"; };
-		FA0C13DA21A754CE008A08A2 /* ReedSolomon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReedSolomon.h; sourceTree = "<group>"; };
+		FAD086EB21A9245F009A1F5C /* image_data_extractor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = image_data_extractor.hpp; sourceTree = "<group>"; };
+		FAD086EC21A9245F009A1F5C /* dot_detector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = dot_detector.hpp; sourceTree = "<group>"; };
+		FAD086ED21A9245F009A1F5C /* alphabet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = alphabet.cpp; sourceTree = "<group>"; };
+		FAD086EE21A9245F009A1F5C /* qr_data_coder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = qr_data_coder.cpp; sourceTree = "<group>"; };
+		FAD086EF21A9245F009A1F5C /* qr_image_extractor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = qr_image_extractor.cpp; sourceTree = "<group>"; };
+		FAD086F021A9245F009A1F5C /* alphabet.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = alphabet.hpp; sourceTree = "<group>"; };
+		FAD086F121A9245F009A1F5C /* qr_data_coder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = qr_data_coder.hpp; sourceTree = "<group>"; };
+		FAD086F221A9245F009A1F5C /* qr_image_extractor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = qr_image_extractor.hpp; sourceTree = "<group>"; };
+		FAD086F321A9245F009A1F5C /* image_data_extractor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = image_data_extractor.cpp; sourceTree = "<group>"; };
+		FAD086F521A9245F009A1F5C /* GenericGF.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GenericGF.cpp; sourceTree = "<group>"; };
+		FAD086F621A9245F009A1F5C /* ReedSolomonException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ReedSolomonException.cpp; sourceTree = "<group>"; };
+		FAD086F721A9245F009A1F5C /* ReedSolomonDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReedSolomonDecoder.h; sourceTree = "<group>"; };
+		FAD086F821A9245F009A1F5C /* Counted.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Counted.h; sourceTree = "<group>"; };
+		FAD086F921A9245F009A1F5C /* GenericGFPoly.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GenericGFPoly.cpp; sourceTree = "<group>"; };
+		FAD086FA21A9245F009A1F5C /* GenericGF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenericGF.h; sourceTree = "<group>"; };
+		FAD086FB21A9245F009A1F5C /* ReedSolomon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ReedSolomon.cpp; sourceTree = "<group>"; };
+		FAD086FC21A9245F009A1F5C /* Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Array.h; sourceTree = "<group>"; };
+		FAD086FD21A9245F009A1F5C /* ReedSolomonDecoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ReedSolomonDecoder.cpp; sourceTree = "<group>"; };
+		FAD086FE21A9245F009A1F5C /* ReedSolomonException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReedSolomonException.h; sourceTree = "<group>"; };
+		FAD086FF21A9245F009A1F5C /* ReedSolomonEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReedSolomonEncoder.h; sourceTree = "<group>"; };
+		FAD0870021A9245F009A1F5C /* ReedSolomonEncoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ReedSolomonEncoder.cpp; sourceTree = "<group>"; };
+		FAD0870121A9245F009A1F5C /* GenericGFPoly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenericGFPoly.h; sourceTree = "<group>"; };
+		FAD0870221A9245F009A1F5C /* ReedSolomon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReedSolomon.h; sourceTree = "<group>"; };
+		FAD0870321A9245F009A1F5C /* dot_detector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dot_detector.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,38 +95,49 @@
 		FA0C13B321A4A484008A08A2 /* QRCode_Mac */ = {
 			isa = PBXGroup;
 			children = (
-				FA0C13C021A5FA5A008A08A2 /* qr_image_extractor.cpp */,
-				FA0C13C121A5FA5A008A08A2 /* qr_image_extractor.hpp */,
-				FA0C13CC21A754CE008A08A2 /* reedsolomon */,
-				FA0C13C921A609EB008A08A2 /* alphabet.cpp */,
-				FA0C13CA21A609EB008A08A2 /* alphabet.hpp */,
-				FA0C13C621A600C5008A08A2 /* data_extractor.cpp */,
-				FA0C13C721A600C5008A08A2 /* data_extractor.hpp */,
-				FA0C13BD21A4B0F4008A08A2 /* dot_detector.cpp */,
-				FA0C13BE21A4B0F4008A08A2 /* dot_detector.hpp */,
+				FAD086EA21A9245F009A1F5C /* qr */,
 				FA0C13B421A4A484008A08A2 /* main.cpp */,
 				FA0C13BB21A4A5E9008A08A2 /* qr_image.jpg */,
 			);
 			path = QRCode_Mac;
 			sourceTree = "<group>";
 		};
-		FA0C13CC21A754CE008A08A2 /* reedsolomon */ = {
+		FAD086EA21A9245F009A1F5C /* qr */ = {
 			isa = PBXGroup;
 			children = (
-				FA0C13DA21A754CE008A08A2 /* ReedSolomon.h */,
-				FA0C13D321A754CE008A08A2 /* ReedSolomon.cpp */,
-				FA0C13CD21A754CE008A08A2 /* GenericGF.cpp */,
-				FA0C13CE21A754CE008A08A2 /* ReedSolomonException.cpp */,
-				FA0C13CF21A754CE008A08A2 /* ReedSolomonDecoder.h */,
-				FA0C13D021A754CE008A08A2 /* Counted.h */,
-				FA0C13D121A754CE008A08A2 /* GenericGFPoly.cpp */,
-				FA0C13D221A754CE008A08A2 /* GenericGF.h */,
-				FA0C13D421A754CE008A08A2 /* Array.h */,
-				FA0C13D521A754CE008A08A2 /* ReedSolomonDecoder.cpp */,
-				FA0C13D621A754CE008A08A2 /* ReedSolomonException.h */,
-				FA0C13D721A754CE008A08A2 /* ReedSolomonEncoder.h */,
-				FA0C13D821A754CE008A08A2 /* ReedSolomonEncoder.cpp */,
-				FA0C13D921A754CE008A08A2 /* GenericGFPoly.h */,
+				FAD086EB21A9245F009A1F5C /* image_data_extractor.hpp */,
+				FAD086EC21A9245F009A1F5C /* dot_detector.hpp */,
+				FAD086ED21A9245F009A1F5C /* alphabet.cpp */,
+				FAD086EE21A9245F009A1F5C /* qr_data_coder.cpp */,
+				FAD086EF21A9245F009A1F5C /* qr_image_extractor.cpp */,
+				FAD086F021A9245F009A1F5C /* alphabet.hpp */,
+				FAD086F121A9245F009A1F5C /* qr_data_coder.hpp */,
+				FAD086F221A9245F009A1F5C /* qr_image_extractor.hpp */,
+				FAD086F321A9245F009A1F5C /* image_data_extractor.cpp */,
+				FAD086F421A9245F009A1F5C /* reedsolomon */,
+				FAD0870321A9245F009A1F5C /* dot_detector.cpp */,
+			);
+			name = qr;
+			path = ../../qr;
+			sourceTree = "<group>";
+		};
+		FAD086F421A9245F009A1F5C /* reedsolomon */ = {
+			isa = PBXGroup;
+			children = (
+				FAD086F521A9245F009A1F5C /* GenericGF.cpp */,
+				FAD086F621A9245F009A1F5C /* ReedSolomonException.cpp */,
+				FAD086F721A9245F009A1F5C /* ReedSolomonDecoder.h */,
+				FAD086F821A9245F009A1F5C /* Counted.h */,
+				FAD086F921A9245F009A1F5C /* GenericGFPoly.cpp */,
+				FAD086FA21A9245F009A1F5C /* GenericGF.h */,
+				FAD086FB21A9245F009A1F5C /* ReedSolomon.cpp */,
+				FAD086FC21A9245F009A1F5C /* Array.h */,
+				FAD086FD21A9245F009A1F5C /* ReedSolomonDecoder.cpp */,
+				FAD086FE21A9245F009A1F5C /* ReedSolomonException.h */,
+				FAD086FF21A9245F009A1F5C /* ReedSolomonEncoder.h */,
+				FAD0870021A9245F009A1F5C /* ReedSolomonEncoder.cpp */,
+				FAD0870121A9245F009A1F5C /* GenericGFPoly.h */,
+				FAD0870221A9245F009A1F5C /* ReedSolomon.h */,
 			);
 			path = reedsolomon;
 			sourceTree = "<group>";
@@ -184,17 +198,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA0C13DF21A754CE008A08A2 /* ReedSolomonDecoder.cpp in Sources */,
-				FA0C13DD21A754CE008A08A2 /* GenericGFPoly.cpp in Sources */,
-				FA0C13C821A600C5008A08A2 /* data_extractor.cpp in Sources */,
-				FA0C13E021A754CE008A08A2 /* ReedSolomonEncoder.cpp in Sources */,
-				FA0C13CB21A609EB008A08A2 /* alphabet.cpp in Sources */,
-				FA0C13DE21A754CE008A08A2 /* ReedSolomon.cpp in Sources */,
-				FA0C13DB21A754CE008A08A2 /* GenericGF.cpp in Sources */,
-				FA0C13C221A5FA5A008A08A2 /* qr_image_extractor.cpp in Sources */,
+				FAD0870C21A9245F009A1F5C /* ReedSolomonDecoder.cpp in Sources */,
+				FAD0870E21A9245F009A1F5C /* dot_detector.cpp in Sources */,
+				FAD0870A21A9245F009A1F5C /* GenericGFPoly.cpp in Sources */,
+				FAD0870521A9245F009A1F5C /* qr_data_coder.cpp in Sources */,
+				FAD0870D21A9245F009A1F5C /* ReedSolomonEncoder.cpp in Sources */,
+				FAD0870421A9245F009A1F5C /* alphabet.cpp in Sources */,
+				FAD0870B21A9245F009A1F5C /* ReedSolomon.cpp in Sources */,
+				FAD0870821A9245F009A1F5C /* GenericGF.cpp in Sources */,
 				FA0C13B521A4A484008A08A2 /* main.cpp in Sources */,
-				FA0C13DC21A754CE008A08A2 /* ReedSolomonException.cpp in Sources */,
-				FA0C13BF21A4B0F4008A08A2 /* dot_detector.cpp in Sources */,
+				FAD0870621A9245F009A1F5C /* qr_image_extractor.cpp in Sources */,
+				FAD0870921A9245F009A1F5C /* ReedSolomonException.cpp in Sources */,
+				FAD0870721A9245F009A1F5C /* image_data_extractor.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
