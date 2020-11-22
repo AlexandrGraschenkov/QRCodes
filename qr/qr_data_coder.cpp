@@ -109,7 +109,7 @@ QRData orderQRData(QRData data) {
             order.push_back(idx);
         }
     }
-    while (order.front() != 0) {
+    while (order.size() && order.front() != 0) {
         order.erase(order.begin());
         // как метод сортировки пузырьком
         swap(data.g1, data.g2);
@@ -198,10 +198,10 @@ int QRDataCoder::getRowSize() const {
 
 std::string QRDataCoder::processQRCode(const cv::Mat &colorImg, cv::Mat *warpedQRImage) {
     if (colorImg.channels() == 1) {
-        threshold(colorImg, grayImg, 110, 255, CV_THRESH_BINARY);
+        threshold(colorImg, grayImg, 110, 255, THRESH_BINARY);
     } else {
-        cvtColor(colorImg, grayImg, CV_BGR2GRAY);
-        threshold(grayImg, grayImg, 110, 255, CV_THRESH_BINARY);
+        cvtColor(colorImg, grayImg, COLOR_BGR2GRAY);
+        threshold(grayImg, grayImg, 110, 255, THRESH_BINARY);
     }
     
     vector<Dot> foundedDots = findDots(grayImg);

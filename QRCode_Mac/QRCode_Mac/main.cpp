@@ -48,30 +48,46 @@ int main(int argc, const char * argv[]) {
 //    testMessageCorrection();
 //    return 0;
     
-    Mat img = imread("/Users/alex/Desktop/test_qr.png");
-    Mat grayImg;
-    cvtColor(img, grayImg, CV_BGR2GRAY);
-    threshold(grayImg, grayImg, 110, 255, CV_THRESH_BINARY);
-    vector<Dot> foundedDots = findDots(grayImg);
-    
-    Mat debugImg;
-    cvtColor(grayImg, debugImg, CV_GRAY2BGR);
-    for (Dot p : foundedDots) {
-        circle(debugImg, p.pos, 3, CV_RGB(0, 255, 0), CV_FILLED);
-        rectangle(debugImg, p.area, CV_RGB(0, 255, 0), 2);
+    string imgPath = "/Users/alex/Desktop/qr_example.png";
+    if (argc == 2) {
+        imgPath = string(argv[1]);
     }
-    Mat extracted = extractQRArea(grayImg, foundedDots);
-    if (extracted.cols > 0) {
+    Mat img = imread(imgPath);
+    
+    bool debug = false;
+    string res = "";
+    
+    if (!debug) {
+        // simple usage
         QRDataCoder coder;
-        QRData data = getQRBitsData(extracted, 22);
-        string str = coder.decode(data);
-        cout << str << endl;
+        res = coder.processQRCode(img);
+        cout << res << endl;
+    } else {
+        // for explore algorithm
+        Mat grayImg;
+        cvtColor(img, grayImg, COLOR_BGR2GRAY);
+        threshold(grayImg, grayImg, 110, 255, THRESH_BINARY);
+        vector<Dot> foundedDots = findDots(grayImg);
+        
+        Mat debugImg;
+        cvtColor(grayImg, debugImg, COLOR_GRAY2BGR);
+        for (Dot p : foundedDots) {
+            circle(debugImg, p.pos, 3, CV_RGB(0, 255, 0), FILLED);
+            rectangle(debugImg, p.area, CV_RGB(0, 255, 0), 2);
+        }
+        Mat extracted = extractQRArea(grayImg, foundedDots);
+        if (extracted.cols > 0) {
+            QRDataCoder coder;
+            QRData data = getQRBitsData(extracted, 23);
+            string str = coder.decode(data);
+            cout << str << endl;
+        }
+        
+        imshow("Source", img);
+        imshow("Founded points", debugImg);
+        imshow("QR Warped", extracted);
+        waitKey();
     }
-    
-    imshow("Source", img);
-    imshow("Founded points", debugImg);
-    imshow("QR Warped", extracted);
-    waitKey();
     
     return 0;
 }

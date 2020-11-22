@@ -40,7 +40,7 @@ Point2f applyTransform(Point2f p, Size size, Side side) {
 
 QRData getQRBitsData(const cv::Mat &grayImg, int rowSize, Mat *debugImg) {
     if (debugImg) {
-        cvtColor(grayImg, *debugImg, CV_GRAY2BGR);
+        cvtColor(grayImg, *debugImg, COLOR_GRAY2BGR);
     }
     
     int startOffset = 43;

@@ -326,8 +326,8 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RE82W8HD52;
-				HEADER_SEARCH_PATHS = /usr/local/include;
-				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				HEADER_SEARCH_PATHS = /usr/local/opt/opencv/include/opencv4;
+				LIBRARY_SEARCH_PATHS = /usr/local/opt/opencv/lib;
 				OTHER_LDFLAGS = (
 					"-lopencv_core",
 					"-lopencv_highgui",
@@ -345,8 +345,8 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RE82W8HD52;
-				HEADER_SEARCH_PATHS = /usr/local/include;
-				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				HEADER_SEARCH_PATHS = /usr/local/opt/opencv/include/opencv4;
+				LIBRARY_SEARCH_PATHS = /usr/local/opt/opencv/lib;
 				OTHER_LDFLAGS = (
 					"-lopencv_core",
 					"-lopencv_highgui",
